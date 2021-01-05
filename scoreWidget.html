@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ScoreKeeper using Bulma</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="scoreWidget.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <!-- card - bulma -->
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img
+                    src="https://images.unsplash.com/photo-1607376162689-10d6eb9d6c83?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    alt=""
+                  />
+                </figure>
+              </div>
+              <header class="card-header">
+                <p class="card-header-title">Score Keeper</p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <h1 class="title is-1">
+                    <span id="playerOneScore">0</span>
+                    to
+                    <span id="playerTwoScore">0</span>
+                  </h1>
+                  <p class="subtitle">Use the buttons below to keep score</p>
+
+                  <label for="setScoreLimit" class="label is-large is-inline"
+                    >Playing To</label
+                  >
+                  <div class="select is-rounded">
+                    <select name="setScoreLimit" id="setScoreLimit">
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <button
+                  class="is-primary button card-footer-item"
+                  id="FirstPlayerPoint"
+                >
+                  +1 Player One
+                </button>
+
+                <button
+                  class="is-info button card-footer-item"
+                  id="SecondPlayerPoint"
+                >
+                  +1 Player Two
+                </button>
+
+                <button class="is-danger button card-footer-item" id="reset">
+                  Reset
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="scoreWidget.js"></script>
+  </body>
+</html>
